@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/thekaduu/nodeSchool/issues"
   },
+"scripts": {
+  "test": "vows --spec"
+},
   "homepage": "https://github.com/thekaduu/nodeSchool"
 }
