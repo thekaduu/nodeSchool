@@ -15,7 +15,7 @@ vows.describe('Division by Zero').addBatch({
 
         'we get a value which': {
             'is not a number': function (topic) {
-                assert.equal (topic,1);
+                assert.isNaN (topic);
             },
             'is not equal to itself': function (topic) {
                 assert.notEqual (topic, topic);
