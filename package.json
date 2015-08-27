@@ -1,9 +1,19 @@
 {
-  "author": "Carlos Eduardo <carloseduardolbraz@gmail.com> (http://thekaduu.github.io)",
   "name": "nodeSchool",
-  "version": "0.0.2"
-},
-{"scripts": {
-  "test": "vows --spec"
-}
+  "version": "1.0.0",
+  "description": "Study of NodeJS and Travis-CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thekaduu/nodeSchool.git"
+  },
+  "author": "Carlos Eduardo L. Braz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thekaduu/nodeSchool/issues"
+  },
+  "homepage": "https://github.com/thekaduu/nodeSchool"
 }
