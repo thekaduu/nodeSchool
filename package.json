@@ -1,3 +1,9 @@
-"scripts": {
+{
+  "author": "Carlos Eduardo <carloseduardolbraz@gmail.com> (http://thekaduu.github.io)",
+  "name": "nodeSchool",
+  "version": "0.0.2"
+},
+{"scripts": {
   "test": "vows --spec"
+}
 }
