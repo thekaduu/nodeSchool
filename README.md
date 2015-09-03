@@ -5,7 +5,7 @@
 
 Este repositório tem como objetivo o estudo do NodeJs + Express + ElasticSearch e Socket.io com alguns exercícios resolvidos.
 
-Para utilizar deste repositório parte-se do principio que já possua o [NodeJs](www.nodejs.org) instalado e o [ElasticSearch](wwww.elastic.io)
+Para utilizar deste repositório parte-se do principio que já possua o [NodeJs](http://www.nodejs.org) instalado e o [ElasticSearch](http://wwww.elastic.io)
 
 
 Como Instalar:
