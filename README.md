@@ -23,3 +23,10 @@ Clone o repositório e depois entre na pasta do projeto e instale as dependencia
 ```linux
 	$ npm install
 ```
+Rodando a budega
+------
+Entre na pasta do projeto que deseja rodar e execute o index.js. Depois basta acessar a url do projeto.
+```linux
+	$ cd liveChat
+	$ node index.js
+```
