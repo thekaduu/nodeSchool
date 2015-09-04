@@ -1,0 +1,15 @@
+{
+  "name": "liveChat",
+  "version": "1.0.0",
+  "description": "Live chat system. This application just is to study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.3.6"
+  }
+}
