@@ -1,15 +1,29 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+app.use(express.static('public'));
+
+
 app.get('/', function(req, res){
-  res.sendfile('views/index.html');
+  res.sendFile(__dirname + '/views/index.html');
+
 });
 
-io.on('connection', function(socket){
-  console.log('a user connected');
+
+io.on('connection', function(socket){	
+	socket.on('clientId', function(id) {
+		socket.id = id;		
+	})
+
+    socket.on('message', function(msg){		
+	    socket.broadcast.emit('message',{clientId: socket.id, text: msg});    
+  });
 });
+
+
 
 http.listen(3000, function(){
-  console.log('listening on *:3000');
+  console.log('Rodando em localhost:3000');
 });

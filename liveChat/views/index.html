@@ -2,12 +2,60 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>LiveChat - Your chat online</title>
-		<script src="scripts/client.js"></script>
-		<script>
-  			var socket = io();
-		</script>
+		<script src="js/socket.io.js"></script>
+		
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	</head>
-	<body>
-		teste		
+	<body class="col-md-12">
+		<div class="col-md-4">
+			<label for='user_name'>Username: </label>
+			<input type="text" id="user_name" name="user_name" class="form-control"/>
+		</div>
+		<div class="col-md-8">
+			<div class="col-md-10">				
+				<label>Your Message: </label>
+				<input type="text" class="form-control" id="message" placeholder="Write your message" />
+			</div>
+			<div class="col-md-2">
+				<button id="send" class="btn btn-success">Send</button>				
+			</div>			
+		</div>
+		<div class="container col-md-12" id='messages'></div>
 	</body>
+		<script>
+			
+  			    var socket = io('http://localhost:3000');
+			    var button = document.getElementById('send');
+			    var username = document.getElementById('user_name');
+			    var message = document.getElementById('message');
+
+			    var messages = document.getElementById('messages');			    
+
+  				
+
+			    button.onclick = function(){
+			    	socket.emit('clientId', username.value);
+			    	socket.emit('message', message.value);
+			    	message.value = '';
+			    }
+  				socket.on('connect', function(){
+  					
+
+  				});
+  				socket.on('message',function(message){  			
+  					var div = document.createElement('div')	;
+  					div.className = 'row';
+  					div.style="margin-bottom: 20px;"
+  					if ( message.clientId.trim() != username.value.trim() ){
+  						div.className = 'row text-right';  						
+
+  					}
+  					div.innerHTML = '<b>' + message.clientId + ' say: </b> <i> ' + message.text + '</i>';
+  					messages.appendChild(div);  					
+  				});
+  			
+
+
+		</script>
 </html>
